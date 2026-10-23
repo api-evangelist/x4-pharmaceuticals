@@ -1,25 +1,71 @@
 aid: x4-pharmaceuticals
+
 name: X4 Pharmaceuticals
-description: 'X4 Pharmaceuticals is a company surfaced via the API Evangelist harvest backlog (source:
-  vc-portfolio; backed by nea) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'X4 Pharmaceuticals develops and commercializes innovative therapies for rare immune system diseases. It has received U.S. approval for mavorixafor (XOLREMDI®) and is advancing it in a global Phase 3 trial. Headquartered in Boston, Massachusetts, X4 is publicly traded on Nasdaq under the symbol XFOR. The company focuses on patients with unmet needs, delivering progress through its Rare Resolve program.'
+
 url: https://raw.githubusercontent.com/api-evangelist/x4-pharmaceuticals/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Pharmaceuticals
+- Rare Diseases
+- Clinical Trials
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- nea
+
 common:
+- type: Hosts
+  url: hosts/x4-pharmaceuticals-hosts.yml
+- type: Vendors
+  url: vendors/x4-pharmaceuticals-vendors.yml
+- type: DomainSecurity
+  url: security/x4-pharmaceuticals-domain-security.yml
 - type: Website
   url: https://www.x4pharma.com/
+- type: Documentation
+  url: https://www.x4pharma.com/about/
+- type: TermsOfService
+  url: https://www.x4pharma.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.x4pharma.com/privacy/
+- type: Compliance
+  url: https://www.x4pharma.com/compliance-ethics/
+
+apis: []
+
+x-backed-by:
+- nea
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: X4 Pharmaceuticals is a biotech company with no public developer API.
+  evidence:
+    - url: https://www.x4pharma.com/
+      status: 200
+  checked: '2026-10-23'
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
